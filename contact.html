@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        h3 , h1 {
+            padding: 10px;
+            background-color: beige;
+            text-align: center;
+            border: solid black 3px;
+            margin: 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 400px;
+            border-radius: 10px;
+        }
+        h3 {
+            cursor: pointer;
+        }
+        h1 {
+            background-color: red;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        html, body {
+            background-color:rgb(189, 245, 245);
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  width: 60%;  
+  position: relative;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home-img{
+margin: 0 auto;
+  position:relative;
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+        border-radius: 50%;
+        }
+    .home-img img {
+        margin: 0 auto;
+        position: relative;
+        top: 3rem;
+        width: 22vw;
+        bottom: auto;
+        border-radius: 50%;
+        box-shadow:0 0 25px cornflowerblue;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+        }
+    .home-img img:hover{
+        box-shadow:0 0 50px red,
+                 0 0 100px 
+        }
+    h3:hover{
+        box-shadow:0 0 50px red,
+                 0 0 100px 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="home-img">
+        <img src="imgs/Profile.jpg" alt="">
+        </div>
+    <section>
+    <h1>You cantact me here</h1>
+    <h3>Contact no: 09760143525</h3>
+    <h3>Email: lvrsclothingph@gmail.com</h3>
+</section>
+</body>
+</html>
