@@ -1,24 +1,8 @@
-<script>
-var video = document.getElementById("sports");
+// Select the button element
+const toggleModeBtn = document.getElementById('toggle-mode-btn');
 
-// Function to check if element is in viewport
-function isInViewport(element) {
-  var rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-}
-
-// Function to handle scroll event
-function handleScroll() {
-  if (!isInViewport(video)) {
-    video.pause(); // Pause video if it's not in viewport
-  }
-}
-
-// Add event listener for scroll event
-window.addEventListener("scroll", handleScroll);
-</script>
+// Add click event listener to the button
+toggleModeBtn.addEventListener('click', () => {
+    // Toggle the body class to switch between light and dark mode
+    document.body.classList.toggle('light-mode');
+});
