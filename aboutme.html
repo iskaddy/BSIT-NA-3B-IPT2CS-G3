@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BPROFILE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body style="background-image: url('bg.jpg');background-repeat: no-repeat;background-size: cover;">
+
+    <nav>
+        <img src="logo.png" alt="Logo">
+        <a href="#home">HOME</a>
+        <a href="bugarinp.html">PROFILE</a>
+        <a href="capcutvideo.html">CAPCUT</a>
+        <a href="aboutme.html">ABOUT ME</a>
+    </nav>
+
+<div class="profile">
+    <img class="profile-image" src="mee.png" alt="Angelica Image">
+</div>
+<div class="smphone">
+    <a href="https://www.facebook.com/angelica.bugarin.589?mibextid=ZbWKwL/" target="_blank">
+        <img src="fb.png" alt="fb icon" width="40" height="40"></a>
+
+     <a href="https://www.instagram.com/april.gb?igsh=MTRteTYzdzdoNTNwMA==" target="_blank">
+            <img src="ig.jpg" alt="ig icon" width="40" height="40"></a>
+
+    <a href="https://www.capcut.com/profile/hei4VIcCUZPV2vUCRUop-roKOELnRSKGURLNI9SpYG0" target="_blank">
+        <img src="capcut.png" alt="ccicon" width="40" height="40"></a>
+</div>
+
+<div class="about">
+    <br><h1 id="hc"> Hello Cutie!</h1>
+    <h2 id="name"> Im Angelica Marie Gabriel Bugarin</h2>
+    <button id="clickme"> CLICK ME HERE !</button>
+    <button id="changebg">CHANGE ME </button>
+    <p id="dynamicParagraph"></p>
+</div>
+
+
+<script>
+    var timeoutIds = []; 
+
+document.getElementById("clickme").addEventListener("click", function() {
+    timeoutIds.forEach(function(id) {
+        clearTimeout(id);
+    });
+    timeoutIds = [];
+
+    var paragraphContent = "In the simple municipality of San Clemente, I will turn 22 on April 9th. As my birthday approaches, I thought I'd share more about my varied life. Being the second of three siblings, there's always a lot of energy and friendship in our home. My passion for the outdoors inspires me to take unexpected adventures to find the hidden treasures that surround us. I love nothing more than to ride a motorcycle and enjoy the rush of the wide road when the wind is blowing. My phone provides more than simply a tool in the digital environment. It's creative material for me. I've grown a following of 48.2k followers and received an unbelievable 263.9k likes as a CapCut creator. My family's unexpected journey, which started during the pandemic, ended up being quite profitable. It gives me hope to see how a personal interest could grow into something that not only makes me happy but also benefits those around me.";
+
+    var characters = paragraphContent.split('');
+
+    var dynamicParagraph = document.getElementById("dynamicParagraph");
+
+    dynamicParagraph.innerHTML = ''; 
+
+    characters.forEach(function(char, index) {
+        var timeoutId = setTimeout(function() {
+            dynamicParagraph.innerHTML += char;
+
+            if (index === characters.length - 1) {
+                dynamicParagraph.innerHTML += '<br>';
+            }
+        }, 50 * index);
+
+        timeoutIds.push(timeoutId);
+    });
+});
+document.getElementById('changebg').addEventListener('click', function() {
+
+var hcElement = document.querySelector('.about h1');
+var nameElement = document.querySelector('.about h2');
+
+var newColor = getRandomColor();
+hcElement.style.color = newColor;
+nameElement.style.color = newColor;
+});
+function getRandomColor() {
+var letters = '0123456789ABCDEF';
+var color = '#';
+for (var i = 0; i < 6; i++) {
+  color += letters[Math.floor(Math.random() * 16)];
+}
+return color;
+}
+     
+
+</script>
+
+</body>
+
+
+
+</html>
