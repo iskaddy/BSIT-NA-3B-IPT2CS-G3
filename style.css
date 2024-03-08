@@ -235,9 +235,9 @@
       }
       .groupmates {
         display: flex;
-        justify-content: center;
+        justify-content: center;                                                    /* KIANN WEBSTER A. LAVARIAS */
         }
-        
+                                                                                                            /* KIANN WEBSTER A. LAVARIAS */
     
         .container {
         display: flex;
@@ -286,7 +286,7 @@
         cursor: pointer;
     }
     button {
-        border-radius: 30px;
+        border-radius: 30px;                                                                                                        /* KIANN WEBSTER A. LAVARIAS */
         color: var(--main-color);
         background-color: #111111;
         padding: 8px 20px 8px 20px;
