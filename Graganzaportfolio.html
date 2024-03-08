@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <title>Roi's Portfolio</title>
+
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+
+<div class="container" id="blur">
+    <div class="content">
+        <button onclick="toggle()">Hobby</button>    
+    </div>
+    <div class="inside">
+        <p class="greetings">Hi! I am</p>
+        <h1>Roi Justine Graganza</h1>
+
+        <h5>
+        <strong>man‧ya‧man</strong>
+        </h5>
+        <p class="manyaman">
+        nagmula sa salitang Kapampangan na ang ibig <br>
+        sabihin ay <strong>MASARAP</strong>, kaaya-aya sa panlasa</p>
+
+        
+    </div>
+    <img class="img1" src="meme.png" alt="">
+    <img class="img2" src="meme.png" alt="">
+    <img class="img3" src="meme.png" alt="">
+    <img class="img4" src="omarb.png" alt="K&B II">
+
+    <button id="play" onclick="audio.play();">Play now!</button>
+    <script src="scripttt.js"></script>
+</div>
+
+    <div id="popup">
+        <h2><strong>I absolutely love cooking. I can merrily state that my kitchen is my playground in every sense! My father has always been a wonderful cook. <br>
+
+            <br> I have seen him prepare scrumptious meals for hundreds of guests in a few hours! <br>
+            
+            <br> Honestly, I find cooking very therapeutic and look forward to planning my meals every day. <br>
+            
+            <br> It’s only due to his encouragement and constructive criticism that I’ve gotten better at my hobby.</strong></h2>
+        <button onclick="toggle()">Close</button>
+    </div>
+
+<script type="text/javascript">
+    function toggle(){
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active')
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active')
+    }
+</script>
+
+
+
+</body>
+</html>
