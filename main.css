@@ -1,0 +1,243 @@
+
+@font-face {
+    font-family: two;
+    src: url(KeeponTruckin.ttf);
+}
+
+@font-face {
+    font-family: three;
+    src: url(Eckmannpsych-Medium.ttf);
+}
+
+@font-face {
+    font-family: six;
+    src: url(Derivia-Regular.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    }
+
+    .container{
+        position: absolute;
+        width: 100%;
+        min-height: 100vh;
+        background-image: url('hapon.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        transition: 0.5s;
+        padding: 0px;
+        bottom: 0%;
+    }
+    .container#blur.active
+    {
+        filter: blur(5px);
+    }
+    .container .content
+    {
+        position: relative;
+        max-width: 800px;
+        max-height: 1000px;
+    }
+
+    button
+    {
+        position: relative;
+        padding: 5px 20px;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #cba437;
+        background: #f3503f;
+        box-shadow: 3px 3px #006674;
+        border-radius: 10px;
+        font-size: 30px;
+        font-family: two;
+        z-index: 1;
+        animation: animate 2.1s ease-in-out 1 forwards;
+        -webkit-text-stroke: 1px black;
+    }
+
+    .container .content button
+    {
+        position: relative;
+        padding: 5px 20px;
+        display: inline-block;
+        margin-top: 20px;
+        text-decoration: none;
+        color:#006674;
+        background: #d69262;
+	    box-shadow: 3px 3px #5e3b23;
+        border-radius: 10px;
+        font-size: 35px;
+        font-family: two;
+        transform: skewY(9deg) translateY(0px);
+	    -webkit-text-stroke: 1px black;
+
+    }
+
+    #popup
+    {
+        position:fixed;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 463px;
+        padding: 50px;
+        box-shadow: 0 5px 30px rgba(0,0,0, .30);
+        background: #fff;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s;
+        background-image: url(caltox.jpg);
+        background-repeat: no-repeat;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    #popup.active
+    {
+        top: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    .container .content 
+    {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        text-align: left;
+        color: #fff;
+    }
+
+    h1 {
+        position: absolute;
+        font-family: three;
+        transform: skewY(10deg) translateY(0px);
+        font-size: 110px;
+        left: 10%;
+        top: 44%;
+        opacity: 0;
+        animation: animate 1.5s ease-in-out 1 forwards;
+        color: #f3503f;
+        -webkit-text-stroke: 0.5px black;
+        text-shadow: 5px 5px #cba437;
+        z-index: 1;
+        
+    }
+
+    h2{
+        text-align: justify;
+        font-family: six;
+        color: #f3dab3;
+        text-shadow: 3px 3px #006674;
+        font-weight: 800px;
+        font-size: 30px;
+    }
+
+    .greetings {
+        position: absolute;
+        font-family: two;
+        transform: skewY(12deg) translateY(0px);
+        font-size: 40px;
+        left: 10%;
+        top: 35%;
+        opacity: 0;
+        animation: animate 0.5s ease-in-out 1 forwards;
+        color: #cba437;
+        -webkit-text-stroke: 1.5px black;
+        text-shadow: 3px 3px #006674;
+        z-index: 1;
+    }
+
+    h5 {
+        position: absolute;
+        font-family: six;
+        transform: skewY(9deg) translateY(0px);
+        font-size: 50px;
+        color: #f3dab3;
+        text-shadow: 3px 3px #006674;
+        left: 10%;
+        top: 57%;
+        opacity: 0;
+        animation: animate 2s ease-in-out 1 forwards;
+        z-index: 1;
+        
+        
+    }
+
+    .manyaman {
+        position: absolute;
+        font-family: six;
+        transform: skewY(9deg) translateY(0px);
+        font-size: 35px;
+        color: #fff;
+        left: 10%;
+        top: 66%;
+        opacity: 0;
+        animation: animate 2s ease-in-out 1 forwards;
+        z-index: 1;
+        line-height: 50px;
+    }
+
+    .manyaman strong {
+        color: #f3dab3;
+        text-shadow: 3px 3px #006674;
+    }
+
+    #play {
+        position: absolute;
+        top: 22%;
+        right: 7%;
+    }
+
+    .img1 {
+        position: absolute;
+        height: 850px;
+        border-radius: 20px;
+        bottom: 0;
+        left: -2%;
+        animation: animate 2s ease-in-out 1 forwards;
+    }
+    .img2 {
+        position: absolute;
+        height: 750px;
+        border-radius: 20px;
+        bottom: 0;
+        left: 5%;
+        animation: animate 2s ease-in-out 1 forwards;
+    }
+    .img3 {
+        position: absolute;
+        height: 700px;
+        border-radius: 20px;
+        bottom: 0;
+        left: 10%;
+        animation: animate 2s ease-in-out 1 forwards;
+        
+    }
+    .img4 {
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        height: 20%;
+        animation: animate 2s ease-in-out 1 forwards;
+    }
+
+    @keyframes animate {
+        from{
+            opacity: 0;
+            transform: skewY(10deg) translateY(0px);
+            filter: blur(33px);
+        }
+        to{
+            opacity: 1;
+            filter: blur(0);
+        }
+      }
+
+      
