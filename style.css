@@ -1,0 +1,112 @@
+        @font-face {
+            font-family: pangalan;
+            src: url(BlackBurgerRough-MK5r.otf);
+        }
+        @font-face {
+            font-family: melon;
+            src: url(Melon-nR2p1.ttf);
+        }
+        @font-face {
+            font-family: maliit;
+            src: url(MatchaLatte-OV0gO.ttf);
+        }
+        
+        *
+        {
+            margin: 0;
+            padding: 0;
+
+
+        }
+
+        section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #6F4E37;
+            background-size: cover;
+        }
+
+        .bgtext {
+            position: relative;
+            transform: skewY(345deg) translateY(-200px);
+            animation: animateColor 5s linear infinite;
+        }
+
+        @keyframes animateColor {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(10deg);
+            }
+        }
+
+        .bgtext h2 {
+            position: relative;
+            width: 100%;
+            padding: 0%;
+            font-size: 8em;
+            color: #ccae9a;
+            pointer-events: none;
+            line-height: 1em;
+            white-space: nowrap;
+            text-shadow: calc(var(--x)) 100px 0 rgba(255, 255, 255, 0.1);
+            transform: translateX(calc(0% - var(--x) * 1.5));
+
+        }
+
+        .bgtext h2 span {
+            color: #ccae9a;
+            margin: 0 5px;
+        }
+
+        .bgtext h2 span:nth-child(even){
+            color: transparent;
+            -webkit-text-stroke: 1px rgb(80, 37, 2);
+        }  
+
+        h1 {
+            position: absolute;
+            font-family: pangalan;
+            font-size: 80px;
+            top: 25%;
+            left: 10%;
+            -webkit-text-stroke: 1px white;
+
+        }
+
+        p {
+            position: absolute;
+            font-family: maliit;
+            font-size: 40px;
+            top: 20%;
+            left: 10%;
+            color: white;
+            -webkit-text-stroke: 1px black;
+            
+            
+        }
+
+        .hobbyint {
+            position: absolute;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            top: 50%;
+            left: 10%;
+            color: white;
+            -webkit-text-stroke: 1px black;
+        }
+
+        .bgtext{
+            font-family: melon;
+            font-size: 25px;
+        }
+
+        img {
+            position: absolute;
+            top: 15%;
+            left: 70%;
+            height: 500px;
+        }
